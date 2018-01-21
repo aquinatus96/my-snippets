@@ -1,0 +1,46 @@
+/* swipe to right START */
+
+.style-class {
+    width: 200px;
+    height: 50px;
+    background-color: #your-color;
+    color: #eee;
+    transition-duration: 0.3s;
+}
+
+.style-class:hover {
+    color: #8c6339;
+    cursor: pointer;
+}
+
+.to-right {
+    display: inline-block;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    position: relative;
+    transition: color .3s;
+}
+
+.to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #eee;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform .3s ease-in;
+    -webkit-transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    -webkit-transition: transform .3s ease-in;
+}
+
+.to-right:hover:before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* swipe to right END */
